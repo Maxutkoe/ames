@@ -95,6 +95,7 @@ button{
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function(){
+ var peremeshat_voprosi = "да";
     voprosi = [[vopros_1,pr_otv_zadachi_1],[vopros_2,pr_otv_zadachi_2],[vopros_3,pr_otv_zadachi_3],[vopros_4,pr_otv_zadachi_4],[vopros_5,pr_otv_zadachi_5],[vopros_6,pr_otv_zadachi_6],[vopros_7,pr_otv_zadachi_7],[vopros_8,pr_otv_zadachi_8],[vopros_9,pr_otv_zadachi_9],[vopros_10,pr_otv_zadachi_10],[vopros_11,pr_otv_zadachi_11],[vopros_12,pr_otv_zadachi_12],[vopros_13,pr_otv_zadachi_13],[vopros_14,pr_otv_zadachi_14],[vopros_15,pr_otv_zadachi_15]];
     if(peremeshat_voprosi == "да"){
         voprosi = peremeshat_vse_voprosi(voprosi);
@@ -117,20 +118,20 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('tema').innerHTML = test;
 });
 function sled_vopr(){
-var vopros_1 = "<font face = 'calibri'>Как зовут Ассасина?<br>(Варианты: Арно,Кел,Кратос)";
-var vopros_2 = "<font face = 'calibri'>Как зовут Бога Войны?<br>(Варианты: Арно,Кел,Кратос)";
-var vopros_3 = "<font face = 'calibri'>Какая компания создала серию игр Assasin's Creed?<br>(Варианты: Арно,Кел,Кратос)";
-var vopros_4 = "<font face = 'calibri'>В каком году вышла игра GTA V?<br>(Варианты: Арно,Кел,Кратос)";
-var vopros_5 = "<font face = 'calibri'>Какая игра стала 'Игрой Года' в 2021 году?<br>(Варианты: Арно,Кел,Кратос)";
-var vopros_6 = "<font face = 'calibri'>Какая компания создала игры 'The Last of us' и 'The Last of us 2'?<br>(Варианты: Арно,Кел,Кратос)";
-var vopros_7 = "<font face = 'calibri'>Сколько основных игр в серии 'Uncharted'?<br>(Варианты: Арно,Кел,Кратос)";
-var vopros_8 = "<font face = 'calibri'>Сколько игр в серии 'Assasins's Creed'?<br>(Варианты: Арно,Кел,Кратос)";
+var vopros_1 = "<font face = 'calibri'>Как зовут Ассасина?<br>(Варианты: Арно, Кел, Кратос)";
+var vopros_2 = "<font face = 'calibri'>Как зовут Бога Войны?<br>(Варианты: Локи, Один, Кратос)";
+var vopros_3 = "<font face = 'calibri'>Какая компания создала серию игр Assasin's Creed?<br>(Варианты: Insomniac, Ubisoft, Milestone)";
+var vopros_4 = "<font face = 'calibri'>В каком году вышла игра GTA V?<br>(Варианты: 2014, 2015, 2013)";
+var vopros_5 = "<font face = 'calibri'>Какая игра стала 'Игрой Года' в 2021 году?<br>(Варианты: It takes two, Red Dead Redemption 2, Spider-man: Miles Morales)";
+var vopros_6 = "<font face = 'calibri'>Какая компания создала игры 'The Last of us' и 'The Last of us 2'?<br>(Варианты: EA Games, Naughty Dog, Matter)";
+var vopros_7 = "<font face = 'calibri'>Сколько основных игр в серии 'Uncharted'?<br>(Варианты: 6, 3, 4)";
+var vopros_8 = "<font face = 'calibri'>Сколько игр в серии 'Assasins's Creed'?<br>(Варианты: 6, 10, 12)";
 var vopros_9 = "<font face = 'calibri'>Как зовут джеда?<br>(Варианты: Арно,Кел,Кратос)";
-var vopros_10 = "<font face = 'calibri'>Для скольких людей предназначена игра 'It takes two'?<br>(Варианты: Арно,Кел,Кратос)";
-var vopros_11 = "<font face = 'calibri'>42*8 - 7 = <br>(Варианты: Арно,Кел,Кратос)";
-var vopros_12 = "<font face = 'calibri'>43*6 - 5 = <br>(Варианты: Арно,Кел,Кратос)";
-var vopros_13 = "<font face = 'calibri'>4*62 - 6 = <br>(Варианты: Арно,Кел,Кратос)";
-var vopros_14 = "<font face = 'calibri'>45*9 - 9 = <br>(Варианты: Арно,Кел,Кратос)";
+var vopros_10 = "<font face = 'calibri'>Для скольких людей предназначена игра 'It takes two'?<br>(Варианты: 1, 4, 2)";
+var vopros_11 = "<font face = 'calibri'>42*8 - 7 = <br>(Варианты: Арно, Кел, Кратос)";
+var vopros_12 = "<font face = 'calibri'>43*6 - 5 = <br>(Варианты: Арно, Кел, Кратос)";
+var vopros_13 = "<font face = 'calibri'>4*62 - 6 = <br>(Варианты: Арно, Кел, Кратос)";
+var vopros_14 = "<font face = 'calibri'>45*9 - 9 = <br>(Варианты: Арно, Кел, Кратос)";
 var vopros_15 = "<font face = 'calibri'>(Варианты: Арно,Кел,Кратос)<br>";
     if(document.getElementById('vopros14').style.display == "block"){
         document.getElementById('vopros14').style.display = "none";
@@ -372,7 +373,6 @@ function kodirov(stroka) {
     return b64enc; 
 }
 function peremeshat_vse_voprosi(m_vopros) {
- var peremeshat_voprosi = "да";
     for (var i = m_vopros.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = m_vopros[i];
