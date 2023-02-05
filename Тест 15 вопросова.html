@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('v_14').innerHTML = voprosi[13][0];
     document.getElementById('v_15').innerHTML = voprosi[14][0];
     document.getElementById('tema').innerHTML = test;
-var test = "Лёгкая";
-var peremeshat_voprosi = "да";
+});
+function sled_vopr(){
 var vopros_1 = "<font face = 'calibri'>Как зовут Ассасина?<br>(Варианты: Арно,Кел,Кратос)";
 var vopros_2 = "<font face = 'calibri'>Как зовут Бога Войны?<br>(Варианты: Арно,Кел,Кратос)";
 var vopros_3 = "<font face = 'calibri'>Какая компания создала серию игр Assasin's Creed?<br>(Варианты: Арно,Кел,Кратос)";
@@ -132,38 +132,6 @@ var vopros_12 = "<font face = 'calibri'>43*6 - 5 = <br>(Варианты: Арн
 var vopros_13 = "<font face = 'calibri'>4*62 - 6 = <br>(Варианты: Арно,Кел,Кратос)";
 var vopros_14 = "<font face = 'calibri'>45*9 - 9 = <br>(Варианты: Арно,Кел,Кратос)";
 var vopros_15 = "<font face = 'calibri'>(Варианты: Арно,Кел,Кратос)<br>";
-var vopros_ris_1 = "да";
-var vopros_ris_2 = "нет";
-var vopros_ris_3 = "нет";
-var vopros_ris_4 = "да";
-var vopros_ris_5 = "нет";
-var vopros_ris_6 = "нет";
-var vopros_ris_7 = "да";
-var vopros_ris_8 = "нет";
-var vopros_ris_9 = "нет";
-var vopros_ris_10 = "нет";
-var vopros_ris_11 = "нет";
-var vopros_ris_12 = "нет";
-var vopros_ris_13 = "нет";
-var vopros_ris_14 = "нет";
-var vopros_ris_15 = "да";
-var pr_otv_zadachi_1 = "Q9g=="; 
-var pr_otv_zadachi_2 = "Qw5B";
-var pr_otv_zadachi_3 = "VWJpc29mdA==";
-var pr_otv_zadachi_4 = "MjAxMw==";
-var pr_otv_zadachi_5 = "SXQgdGFrZXMgdHdv";
-var pr_otv_zadachi_6 = "TmF1Z2h0eSBEb2c=";
-var pr_otv_zadachi_7 = "NA==";
-var pr_otv_zadachi_8 = "MTI=";
-var pr_otv_zadachi_9 = "U7";
-var pr_otv_zadachi_10 = "Mg==";
-var pr_otv_zadachi_11 = "MzI5";
-var pr_otv_zadachi_12 = "MjUz";
-var pr_otv_zadachi_13 = "MjQy";
-var pr_otv_zadachi_14 = "Mzk2";
-var pr_otv_zadachi_15 = "MzQy";
-});
-function sled_vopr(){
     if(document.getElementById('vopros14').style.display == "block"){
         document.getElementById('vopros14').style.display = "none";
         document.getElementById('vopros15').style.display = "block";
@@ -224,6 +192,21 @@ function sled_vopr(){
     }
 }
 function proverit(){
+var pr_otv_zadachi_1 = "Q9g=="; 
+var pr_otv_zadachi_2 = "Qw5B";
+var pr_otv_zadachi_3 = "VWJpc29mdA==";
+var pr_otv_zadachi_4 = "MjAxMw==";
+var pr_otv_zadachi_5 = "SXQgdGFrZXMgdHdv";
+var pr_otv_zadachi_6 = "TmF1Z2h0eSBEb2c=";
+var pr_otv_zadachi_7 = "NA==";
+var pr_otv_zadachi_8 = "MTI=";
+var pr_otv_zadachi_9 = "U7";
+var pr_otv_zadachi_10 = "Mg==";
+var pr_otv_zadachi_11 = "MzI5";
+var pr_otv_zadachi_12 = "MjUz";
+var pr_otv_zadachi_13 = "MjQy";
+var pr_otv_zadachi_14 = "Mzk2";
+var pr_otv_zadachi_15 = "MzQy";
 otv_uch_1 = document.getElementById('z_1').value;
 otv_ucgenika_1 = otv_uch_1;
 otv_uch_1 = kodirov(otv_uch_1);
@@ -366,6 +349,7 @@ if(otv_uch_15 == voprosi[14][1]){
 vsego_zadach = 15;
 procent_vip = ball/vsego_zadach * 100;
 procent_vip = procent_vip.toFixed();
+var test = "Лёгкая";
 document.getElementById('rezultat').innerHTML = "<span id='ot'>Задания выполнены верно на "+procent_vip+"%.</span><br><br>"+otveti;
 }
 function kodirov(stroka) { 
@@ -388,6 +372,7 @@ function kodirov(stroka) {
     return b64enc; 
 }
 function peremeshat_vse_voprosi(m_vopros) {
+ var peremeshat_voprosi = "да";
     for (var i = m_vopros.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = m_vopros[i];
